@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/spotify_favicon-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-black">
+
+    <nav class="bg-[#07964710] w-full h-[80px] flex items-center px-6 justify-between">
+
+        <div class="flex items-center space-x-4">
+            <svg class="logo w-[40px] relative left-0 hover:scale-[1.05]" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M11.9954 0C5.38111 0 0 5.38151 0 11.9963C0 18.6152 5.38111 24 11.9954 24C18.6147 24 24 18.6152 24 11.9963C24 5.38151 18.6147 0 11.9954 0ZM5.90793 16.4042C7.29868 15.9809 8.72459 15.7662 10.1459 15.7662C12.5597 15.7662 14.9427 16.3779 17.0383 17.5359C17.163 17.6038 17.2763 17.8284 17.3271 18.108C17.378 18.3875 17.3577 18.6749 17.2761 18.8244C17.1731 19.0163 16.9641 19.1403 16.7436 19.1403C16.6343 19.1403 16.5382 19.1157 16.4421 19.0638C14.5183 18.0064 12.3412 17.4474 10.1459 17.4474C8.81957 17.4474 7.51751 17.6437 6.27698 18.0304C6.21655 18.0487 6.15439 18.0581 6.09222 18.0581C5.82059 18.0582 5.58484 17.8851 5.50576 17.6284C5.39898 17.2773 5.61986 16.4984 5.90793 16.4042ZM5.38466 11.9845C6.93474 11.5631 8.53668 11.3494 10.1459 11.3494C13.0389 11.3494 15.9117 12.0494 18.4555 13.3748C18.6338 13.4653 18.7652 13.6187 18.8254 13.8068C18.8865 13.9973 18.8681 14.2021 18.7728 14.3849C18.5458 14.8292 18.2804 15.1277 18.1124 15.1277C17.9932 15.1277 17.8783 15.0991 17.7638 15.0419C15.4016 13.8119 12.8387 13.1882 10.1459 13.1882C8.64803 13.1882 7.17852 13.3852 5.77951 13.7732C5.71444 13.7909 5.64763 13.7998 5.58114 13.7998C5.24459 13.7998 4.94801 13.5725 4.8602 13.2479C4.74775 12.8258 5.00467 12.0878 5.38466 11.9845ZM5.25065 9.09687C5.17959 9.11441 5.10696 9.12323 5.03473 9.12323C4.62799 9.12331 4.27554 8.84845 4.17765 8.4554C4.05498 7.95785 4.36627 7.37988 4.81708 7.26633C6.57033 6.83567 8.36317 6.61731 10.1459 6.61731C13.5968 6.61731 16.9018 7.39318 19.9702 8.92383C20.1833 9.02896 20.3422 9.21041 20.4177 9.43475C20.4932 9.65933 20.4766 9.90106 20.3711 10.1146C20.2274 10.4022 19.9169 10.7119 19.5747 10.7119C19.4428 10.7119 19.3073 10.6809 19.1873 10.6246C16.3687 9.21443 13.3268 8.49938 10.1459 8.49938C8.51127 8.49946 6.86431 8.70043 5.25065 9.09687Z"
+                        fill="#ffffff"></path>
+                </g>
+            </svg>
+        </div>
+
+        <input class="bg-[#1f1f1f] text-white text-[18px] h-[55px] w-[450px] px-[55px] rounded-full 
+        hover:bg-[#282828] focus:outline-none" type="text" placeholder="What do you want to play?">
+
+        <div class="hidden md:flex items-center space-x-6">
+            <button class="sign bg-none py-2 px-4 text-[#ababab] font-[700] hover:scale-[1.05]">Sign up</button>
+            <button class="log bg-white py-2 px-4 rounded-full font-[700] hover:scale-[1.05]">Log in</button>
+        </div>
+
+        <div class="block md:hidden">
+            <svg class="w-8 h-8 text-white cursor-pointer" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+
+    </nav>
+
+
+    <div class="main flex">
+        <div class="left bg-[#1b1b1b9c] h-[510px] w-[25%] rounded-[10px] ml-6 mt-4 overflow-scroll">
+
+            <div class="library flex space-x-7 ml-8 mt-5 items-center">
+                <svg class="w-[34px]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <rect width="208" height="32" x="256" y="152" fill="var(--ci-primary-color, #535353)"
+                            class="ci-primary"></rect>
+                        <rect width="288" height="32" x="176" y="256" fill="var(--ci-primary-color, #535353)"
+                            class="ci-primary"></rect>
+                        <rect width="288" height="32" x="176" y="360" fill="var(--ci-primary-color, #535353)"
+                            class="ci-primary"></rect>
+                        <polygon fill="var(--ci-primary-color, #535353)"
+                            points="192 152 128 152 128 88 96 88 96 152 32 152 32 184 96 184 96 248 128 248 128 184 192 184 192 152"
+                            class="ci-primary"></polygon>
+                    </g>
+                </svg>
+
+                <div class=" left-4 font-[800] relative right-[70px] text-[17px] text-[#535353]">Your Library</div>
+
+                <svg class="hamsvg w-[50px] relative left-[82px] hidden" viewBox="0 -0.5 25 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M5.5 7.75C5.08579 7.75 4.75 8.08579 4.75 8.5C4.75 8.91421 5.08579 9.25 5.5 9.25V7.75ZM19.5 9.25C19.9142 9.25 20.25 8.91421 20.25 8.5C20.25 8.08579 19.9142 7.75 19.5 7.75V9.25ZM5.5 11.75C5.08579 11.75 4.75 12.0858 4.75 12.5C4.75 12.9142 5.08579 13.25 5.5 13.25V11.75ZM17.5 13.25C17.9142 13.25 18.25 12.9142 18.25 12.5C18.25 12.0858 17.9142 11.75 17.5 11.75V13.25ZM5.5 15.75C5.08579 15.75 4.75 16.0858 4.75 16.5C4.75 16.9142 5.08579 17.25 5.5 17.25V15.75ZM12.5 17.25C12.9142 17.25 13.25 16.9142 13.25 16.5C13.25 16.0858 12.9142 15.75 12.5 15.75V17.25ZM5.5 9.25H19.5V7.75H5.5V9.25ZM5.5 13.25H17.5V11.75H5.5V13.25ZM5.5 17.25H12.5V15.75H5.5V17.25Z"
+                            fill="#535353"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="song-lists flex justify-center">
+                <ul class="border border-none rounded-[10px] flex h-[75px] w-[22vw] mt-8 items-center">
+                    <div class="h-[130px] w-[460px] bg-[#1f1f1f] rounded-[10px]">
+                        <h3 class="text-white font-[700] text-[16px] ml-3 mt-2">Create your first playlist</h3>
+                        <div class="text-white text-[13px] font-[600] ml-3 relative top-2">It's easy, we'll help you
+                        </div>
+                        <button
+                            class="bg-white font-[600] text-black rounded-full py-[7px] px-4 relative left-3 top-5">
+                            Create Playlist
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+        <div class="right bg-[#1b1b1b9c] h-[510px] w-[70%] rounded-[10px] ml-6 mt-4">
+
+            <h1 class="text-white font-[800] text-[24px] mt-5 ml-8 hover:underline cursor-pointer">Spotify Playlist</h1>
+
+            <div class="card-cont h-[280px] mt-5 flex items-center">
+                <div
+                    class="card ml-5 h-[280px] w-[220px] flex flex-col items-center cursor-pointer rounded-[8px] hover:bg-[#1a1a1a]">
+                    <div class="h-[165px]">
+                        <img src="images/charming spotify clone.jpeg" alt=""
+                            class="h-[165px] w-[165px] rounded-[8px] relative top-2">
+                        <svg class="greenplay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35"
+                            height="35">
+                            <circle cx="50" cy="50" r="50" fill="#64fa7a" />
+                            <path d="M38 32 Q40 31 44 32 L68 50 Q70 51 68 54 L44 72 Q40 73 38 72 Z" fill="black" />
+                        </svg>
+                    </div>
+
+                    <div class="text-[#d2d2d2] font-[500] relative top-3 ">Charming Songs</div>
+                    <div class="text-[#e8e8e8] text-[13px] relative top-3 w-[180px]">A mesmerizing playlist filled with
+                        beats, vibes, and endless musical joy.</div>
+                </div>
+
+                <div
+                    class="card ml-5 h-[280px] w-[220px] flex flex-col items-center cursor-pointer rounded-[8px] hover:bg-[#1a1a1a]">
+                    <div class="h-[165px]">
+                        <img src="images/phonk spotify clone.jpeg" alt=""
+                            class="h-[165px] w-[165px] rounded-[8px] relative top-2">
+                        <svg class="greenplay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35"
+                            height="35">
+                            <circle cx="50" cy="50" r="50" fill="#64fa7a" />
+                            <path d="M38 32 Q40 31 44 32 L68 50 Q70 51 68 54 L44 72 Q40 73 38 72 Z" fill="black" />
+                        </svg>
+                    </div>
+
+                    <div class="text-[#d2d2d2] font-[500] relative top-3 ">Phonk☠️</div>
+                    <div class="text-[#e8e8e8] text-[13px] relative top-3 w-[180px]">Hard-hitting bass, dark vibes, and
+                        unstoppable energy—pure phonk madness awaits!</div>
+                </div>
+
+                <div
+                    class="card ml-5 h-[280px] w-[220px] flex flex-col items-center cursor-pointer rounded-[8px] hover:bg-[#1a1a1a]">
+                    <div class="h-[165px]">
+                        <img src="images/cover spotify clone.jpeg" alt=""
+                            class="h-[165px] w-[165px] rounded-[8px] relative top-2">
+                        <svg class="greenplay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35"
+                            height="35">
+                            <circle cx="50" cy="50" r="50" fill="#64fa7a" />
+                            <path d="M38 32 Q40 31 44 32 L68 50 Q70 51 68 54 L44 72 Q40 73 38 72 Z" fill="black" />
+                        </svg>
+                    </div>
+
+                    <div class="text-[#d2d2d2] font-[500] relative top-3 ">Bruno Mars</div>
+                    <div class="text-[#e8e8e8] text-[13px] relative top-3 w-[180px]">Smooth vocals, timeless hits, and
+                        pure Bruno Mars magic—feel the groove!</div>
+                </div>
+
+                <div
+                    class="card ml-5 h-[280px] w-[220px] flex flex-col items-center cursor-pointer rounded-[8px] hover:bg-[#1a1a1a]">
+                    <div class="h-[165px]">
+                        <img src="images/divide spotify clone.jpeg" alt=""
+                            class="h-[165px] w-[165px] rounded-[8px] relative top-2">
+                        <svg class="greenplay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35"
+                            height="35">
+                            <circle cx="50" cy="50" r="50" fill="#64fa7a" />
+                            <path d="M38 32 Q40 31 44 32 L68 50 Q70 51 68 54 L44 72 Q40 73 38 72 Z" fill="black" />
+                        </svg>
+                    </div>
+
+                    <div class="text-[#d2d2d2] font-[500] relative top-3 ">Divide</div>
+                    <div class="text-[#e8e8e8] text-[13px] relative top-3 w-[180px]">Soulful melodies, heartfelt
+                        lyrics—experience the magic of Ed Sheeran's Divide.</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div
+            class="bg-[#000000c8] h-[110px] w-[100vw] border-y-[1px] border-gray-700 fixed bottom-0 flex items-center justify-center">
+            <div class="flex absolute left-0">
+                <div class="bg-[#2d2d2d9c] h-[60px] w-[60px] rounded-[8px] flex justify-center items-center ml-7">
+                    <svg width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                        fill="#000000" stroke="#000000" transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="7.168000000000001">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #f5f5f5;
+                                }
+                            </style>
+                            <g>
+                                <path class="st0"
+                                    d="M510.069,388.114V70.633V3.268l-65.848,14.204L110.483,92.396h-0.01v262.876 c-12.625-1.872-26.132-1.332-39.711,2.03c-48.156,11.924-78.972,54.796-68.83,95.756s57.403,64.499,105.559,52.575 c48.156-11.924,78.972-54.796,68.83-95.756V182.327l267.901-60.733v211.914c-12.625-1.872-26.132-1.332-39.712,2.03 c-48.156,11.924-78.972,54.796-68.83,95.756s57.403,64.499,105.559,52.575C489.395,471.946,520.211,429.075,510.069,388.114z">
+                                </path>
+                            </g>
+                        </g>
+                        <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #f5f5f5;
+                                }
+                            </style>
+                            <g>
+                                <path class="st0"
+                                    d="M510.069,388.114V70.633V3.268l-65.848,14.204L110.483,92.396h-0.01v262.876 c-12.625-1.872-26.132-1.332-39.711,2.03c-48.156,11.924-78.972,54.796-68.83,95.756s57.403,64.499,105.559,52.575 c48.156-11.924,78.972-54.796,68.83-95.756V182.327l267.901-60.733v211.914c-12.625-1.872-26.132-1.332-39.712,2.03 c-48.156,11.924-78.972,54.796-68.83,95.756s57.403,64.499,105.559,52.575C489.395,471.946,520.211,429.075,510.069,388.114z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Song Name and Artist -->
+                <div class="song-info flex flex-col ml-5 mt-2">
+                    <div class="text-white text-[13px] font-[500]" id="currentSongName">Song Name</div>
+                    <div class="text-white text-[11px] font-[500]" id="currentSongArtist">Song Artist</div>
+                </div>
+            </div>
+
+            <div class="h-[80px] w-[40vw] flex flex-col items-center">
+                <div class="w-[150px] h-[40px] flex justify-center items-center space-x-3 relative top-2">
+                    <!-- Previous Song Button -->
+                    <svg class="w-[34px] cursor-pointer" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.2409 7.21957V16.7896C20.2409 18.7496 18.1109 19.9796 16.4109 18.9996L12.2609 16.6096L8.11094 14.2096C6.41094 13.2296 6.41094 10.7796 8.11094 9.79957L12.2609 7.39957L16.4109 5.00957C18.1109 4.02957 20.2409 5.24957 20.2409 7.21957Z"
+                            fill="#ffffff"></path>
+                        <path
+                            d="M3.76172 18.9303C3.35172 18.9303 3.01172 18.5903 3.01172 18.1803V5.82031C3.01172 5.41031 3.35172 5.07031 3.76172 5.07031C4.17172 5.07031 4.51172 5.41031 4.51172 5.82031V18.1803C4.51172 18.5903 4.17172 18.9303 3.76172 18.9303Z"
+                            fill="#ffffff"></path>
+                    </svg>
+
+                    <!-- Play/Pause Button -->
+                    <svg class="cursor-pointer play2svg" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM15.5963 10.3318C16.8872 11.0694 16.8872 12.9307 15.5963 13.6683L11.154 16.2068C9.9715 16.8825 8.5002 16.0287 8.5002 14.6667V9.33339C8.5002 7.97146 9.9715 7.11762 11.154 7.79333L15.5963 10.3318Z"
+                            fill="white" />
+                    </svg>
+
+                    <!-- Pause Button (Hidden by Default) -->
+                    <svg class="w-[40px] hidden pause2svg" viewBox="0 0 24 24" fill="none">
+                        <rect width="24" height="24" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM9.5 9C9.22386 9 9 9.22386 9 9.5V14.5C9 14.7761 9.22386 15 9.5 15H10.5C10.7761 15 11 14.7761 11 14.5V9.5C11 9.22386 10.7761 9 10.5 9H9.5ZM13.5 9C13.2239 9 13 9.22386 13 9.5V14.5C13 14.7761 13.2239 15 13.5 15H14.5C14.7761 15 15 14.7761 15 14.5V9.5C15 9.22386 14.7761 9 14.5 9H13.5Z"
+                            fill="white" />
+                    </svg>
+
+                    <!-- Next Song Button -->
+                    <svg class="w-[34px] cursor-pointer" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                        <path
+                            d="M20.2409 7.21957V16.7896C20.2409 18.7496 18.1109 19.9796 16.4109 18.9996L12.2609 16.6096L8.11094 14.2096C6.41094 13.2296 6.41094 10.7796 8.11094 9.79957L12.2609 7.39957L16.4109 5.00957C18.1109 4.02957 20.2409 5.24957 20.2409 7.21957Z"
+                            fill="#ffffff"></path>
+                        <path
+                            d="M3.76172 18.9303C3.35172 18.9303 3.01172 18.5903 3.01172 18.1803V5.82031C3.01172 5.41031 3.35172 5.07031 3.76172 5.07031C4.17172 5.07031 4.51172 5.41031 4.51172 5.82031V18.1803C4.51172 18.5903 4.17172 18.9303 3.76172 18.9303Z"
+                            fill="#ffffff"></path>
+                    </svg>
+                </div>
+
+                <!-- Seekbar and Time -->
+                <div class="w-full flex items-center justify-center space-x-4 relative top-5">
+                    <span class="text-white text-[12px]" id="currentTime">0:00</span>
+                    <div
+                        class="seekbar h-[6px] w-[580px] rounded-full flex items-center cursor-pointer relative bg-white">
+                        <div class="progress bg-[#1db954] h-[6px] rounded-full absolute left-0"></div>
+                        <div
+                            class="circle bg-white border h-[15px] w-[15px] rounded-full cursor-pointer absolute transform -translate-x-1/2">
+                        </div>
+                    </div>
+                    <span class="text-white text-[12px]" id="totalDuration">0:00</span>
+                </div>
+            </div>
+            <!-- Volume Bar -->
+            <!-- Add this volume control section to your HTML -->
+            <div class="flex items-center space-x-4 absolute right-10">
+                <div id="volumeIcon" class="w-6 h-6">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="volume-icon">
+                    </svg>
+                </div>
+                <div class="volume-bar h-[4px] w-[100px] bg-[#535353] rounded-full relative cursor-pointer">
+                    <div class="volume-progress bg-[#1db954] rounded-full h-[4px] absolute left-0" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
