@@ -7,7 +7,7 @@ const charmingSongs = [
 const phonkSongs = [
     { file: "Aura.mp3", artist: "Ogryzek" },
     { file: "Glory.mp3", artist: "Ogryzek" },
-    { file: "Metamorphosis.mp3", artist: "Unknown" },
+    { file: "Metamorphosis.mp3", artist: "Interworld" },
 ];
 const brunoSongs = [
     { file: "Die with a smile.mp3", artist: "Bruno Mars" },
